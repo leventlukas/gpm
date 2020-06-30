@@ -14,10 +14,12 @@ services:
     command: >
       bash -c "cd /usr/src/app/ && pip install -r requirements.txt && python"
   mysql:
-    image: mysql:latest
+    image: mysql:5.7.30
     environment: 
         MYSQL_ROOT_PASSWORD: 'arschmin'
         MYSQL_DATABASE: 'test'
+        MYSQL_USER: 'janlevent'
+        MYSQL_PASSWORD: 'arschmin'
     ports: 
       - 3306:3306
     volumes: 
