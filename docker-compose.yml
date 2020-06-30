@@ -13,6 +13,16 @@ services:
     container_name: python-comp
     command: >
       bash -c "cd /usr/src/app/ && pip install -r requirements.txt && python"
+  mysql:
+    image: mysql:latest
+    environment: 
+        MYSQL_ROOT_PASSWORD: 'arschmin'
+        MYSQL_DATABASE: 'test'
+    ports: 
+      - 3306:3306
+    volumes: 
+      - ./mysql-data:/var/lib/mysql
+    
    
 #docker exec -it <containername> bash
     
