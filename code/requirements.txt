@@ -1,0 +1,5 @@
+requests
+fpdf
+sqlalchemy
+Flask
+flask_mysqldb
